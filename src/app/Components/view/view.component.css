@@ -1,0 +1,149 @@
+.formSec{ background: #fff; padding: 15px; }
+.downlode{
+  margin-left: 85%;
+}
+
+.containers {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 30px 10px;
+  border: 1px solid;
+}
+
+img{
+  height: 100px;
+}
+/* .header>div {
+  vertical-align: top;
+}
+.header-text {
+  margin-left: 210px;
+
+}
+
+.logo{
+  width: fit-content;
+}
+*/
+
+.header-text>p {
+  margin: 0 auto;
+}
+
+.header{
+display: flex;
+}
+.header-text>span {
+  font-weight: 900;
+ }
+
+ .time-stamp {
+  position: relative;
+  margin: 30px 0;
+}
+.time-stamp>span {
+  font-weight: 900;
+}
+.date-time {
+  position: absolute;
+  right: 0;
+}
+.title {
+  background-color: #3367d6;
+  color: #fff;
+  text-align: center;
+  padding: 10px 5px;
+  font-weight: 500;
+  border: 1px solid #000;
+}
+.title+p {
+  font-size: 15px;
+  margin: 15px 0 30px;
+}
+
+.particulars p {
+  font-weight: 600;
+  background-color: #3367d6;
+  margin: 0;
+  padding: 10px 5px;
+  color: #fff;
+}
+
+.particulars ul {
+  display: table;
+  width: 100%;
+}
+
+.particulars li {
+  vertical-align: top;
+  border: 1px solid #000;
+  width: calc(100%/7);
+  height: 100%;
+  text-align: center;
+  font-weight: 500;
+  display: table-cell;
+}
+
+.particulars li div {
+  margin-left: -1px;
+}
+
+.particulars li div:first-child {
+  background: #b3b3b3;
+  padding: 10px 0;
+}
+
+.particulars li div:nth-child(2) {
+  margin-top: 10px;
+}
+
+.titles{
+  font-weight: 600;
+  padding: 18px 0;
+  display: flex;
+}
+
+.summary-data .titles {
+  background-color: #3367d6;
+  padding: 0;
+}
+
+.summary-data .titles>span {
+  width: 10%;
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #b3b3b3;
+  padding: 10px 5px;
+  text-align: end;
+}
+
+.title2nd{
+ margin-left: 92%;
+}
+
+ /* .summary-data p,
+.adverse-media>p {
+  background: #b3b3b3;
+  padding: 10px 8px 10px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.summary-data li>div {
+  display: inline-block;
+  width: 50%;
+  padding: 12px 8px;
+  border: 1px solid #b3b3b3;
+  font-weight: 600;
+} */
+
+/* .summary-data li>div:nth-child(2) {
+  color: green
+} */
+
+/* .summary-data {
+  margin-bottom: 50px;
+}  */
+
+
+
