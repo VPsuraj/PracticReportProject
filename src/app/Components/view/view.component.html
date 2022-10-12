@@ -1,21 +1,169 @@
-<div class="container" >
-  <div class="downlode"  >
+<div class="big-container">
+  <div class="left">
+    <mat-accordion>
+      <mat-expansion-panel class="exp-panel">
+          <mat-expansion-panel-header>
+              <mat-panel-title class="header_title">
+                  <h2>Body</h2>
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="inside-exp">
+              <span>Table</span>
+              <div>
+                  <label>
+                      <input type="radio">
+                      vertical
+                  </label>
+              </div>
+              <div>
+                  <label>
+                      <input type="radio">
+                      Horizontal
+                  </label>
+              </div>
+          </div>
+          <div class="header-line">
+              <div class="header-input" >
+                  <mat-form-field class="inputsize" appearance="outline">
+                      <mat-label>input details heading</mat-label>
+                      <input autocomplete="off"  [(ngModel)]="header" matInput placeholder="Placeholder">
+                  </mat-form-field>
+              </div>
+              <!-- <div class="header-input">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Font</mat-label>
+                      <input [(ngModel)]="h1Font" type="number" matInput placeholder="Placeholder">
+                  </mat-form-field>
+              </div> -->
+              <div class="header-input">
+                  <mat-form-field class="inputsize" appearance="outline">
+                      <mat-label>Color</mat-label>
+                      <input [(ngModel)]="color" matInput type="color">
+                  </mat-form-field>
+              </div>
+          </div>
 
-      <button mat-raised-button>
-          <mat-icon aria-hidden="false"
-              style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
-              file_copy</mat-icon>
-      </button>
-      &nbsp;
-      <button mat-raised-button>
-          <mat-icon aria-hidden="false"
-              style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
-              done</mat-icon>
-      </button>
-  </div>
+
+
+
+
+          <div class="header-linee">
+              <div class="header-input">
+                  <mat-form-field class="matinput" appearance="outline">
+                      <mat-label>FirstName</mat-label>
+                      <input [(ngModel)]="firstname" matInput placeholder="Placeholder">
+                  </mat-form-field>
+              </div>
+              <div class="header-input">
+                  <mat-form-field class="matinput" appearance="outline">
+                      <mat-label>MiddleName</mat-label>
+                      <input [(ngModel)]="MiddleName" type="text" matInput placeholder="Placeholder">
+                  </mat-form-field>
+              </div>
+              <div class="header-input">
+                  <mat-form-field class="matinput" appearance="outline">
+                      <mat-label>LastName</mat-label>
+                      <input [(ngModel)]="LastName"  matInput type="text">
+                  </mat-form-field>
+              </div>
+          </div>
+
+
+
+
+          <div class="header-lineee">
+              <div class="header-input">
+                  <mat-form-field class="matinput"  appearance="outline">
+                      <mat-label>DOB</mat-label>
+                      <input [(ngModel)]="dob" matInput placeholder="Placeholder">
+                  </mat-form-field>
+              </div>
+              <div class="header-input">
+                  <mat-form-field class="matinput"  appearance="outline">
+                      <mat-label>Gender</mat-label>
+                      <input [(ngModel)]="Gender" type="text" matInput placeholder="Placeholder">
+                  </mat-form-field>
+              </div>
+              <div class="header-input">
+                  <mat-form-field class="matinput"  appearance="outline">
+                      <mat-label>FatherName</mat-label>
+                      <input [(ngModel)]="FatherName" matInput type="text">
+                  </mat-form-field>
+              </div>
+          </div>
+
+
+
+
+          <div class="header-line">
+              <!-- <div class="header-input">
+                  <input (change)="onFileSelected($event)" class="upload-file" type="file">
+              </div>
+              <div class="header-input">
+                  <mat-form-field appearance="outline">
+                      <mat-label>Hight</mat-label>
+                      <input [(ngModel)]="hight" type="number" matInput placeholder="Placeholder">
+                  </mat-form-field>
+              </div> -->
+              <div class="header-input">
+                  <mat-form-field class="inputsize" appearance="outline">
+                      <mat-label>Address</mat-label>
+                      <input [(ngModel)]="Address" matInput type="text">
+                  </mat-form-field>
+              </div>
+          </div>
+
+
+
+
+
+          <!-- <div>
+              Logo Positon :
+          </div>
+
+          <div class="inside-exp">
+              <mat-radio-group class="hori-redio" aria-label="Select an option">
+                  <mat-radio-button value="1">Left</mat-radio-button>
+                  <mat-radio-button value="2">Center</mat-radio-button>
+                  <mat-radio-button value="3">Right</mat-radio-button>
+              </mat-radio-group>
+          </div>
+
+          <div>
+              Header Position :
+          </div>
+
+          <div class="inside-exp">
+              <mat-radio-group class="hori-redio" aria-label="Select an option">
+                  <mat-radio-button value="1">Left</mat-radio-button>
+                  <mat-radio-button value="2">Center</mat-radio-button>
+                  <mat-radio-button value="3">Right</mat-radio-button>
+              </mat-radio-group>
+          </div>
+
+
+          <div class="inside-exp">
+              <mat-radio-group class="hori-redio" aria-label="Select an option">
+                  Add Horizontal Line
+                  <mat-radio-button value="1">Default</mat-radio-button>
+                  <mat-radio-button value="2">Custom</mat-radio-button>
+              </mat-radio-group>
+          </div> -->
+
+
+
+      </mat-expansion-panel>
+  </mat-accordion>
 </div>
 
+<!-- for pdf file generation html -->
+
 <div class="containers" id="pdfTable" #pdfTable>
+  <button id='downlode' mat-raised-button (click)="makepdf()">
+    <mat-icon aria-hidden="false"
+        style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
+        download</mat-icon>
+</button>
   <div class="header" >
     <div class="logo" >
       <img src="../../../assets/images/verify24x7.png" alt="verify24x7">
@@ -34,42 +182,38 @@
     GLOBAL CHECK - PERSON SCAN SUMMARY
   </div>
   <p>This information is given with regards to search conducted for: <span>SURAJ KUMAR PANDIT</span></p>
-  <button mat-raised-button (click)="makepdf()">
-    <mat-icon aria-hidden="false"
-        style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
-        download</mat-icon>
-</button>
+
   <div class="tables" >
-    <div class="particulars" >
-      <p >PARTICULARS</p>
+    <div class="particulars"  >
+      <p [ngStyle]="{'background-color':color}">{{header}} </p>
       <ul >
         <li>
           <div>First Name</div>
-          <div>SURAJ</div>
+          <div>{{firstname}}</div>
         </li>
         <li>
           <div>Middle Name</div>
-          <div>KUMAR</div>
+          <div>{{MiddleName}}</div>
         </li>
         <li>
           <div>Last Name</div>
-          <div>PANDIT</div>
+          <div>{{LastName}}</div>
         </li>
         <li>
           <div>DOB</div>
-          <div>07-12-1997</div>
+          <div>{{dob}}</div>
         </li>
         <li>
           <div>Gender</div>
-          <div>Male</div>
+          <div>{{Gender}}</div>
         </li>
         <li>
           <div>Father's Name</div>
-          <div>DEVENDRA PANDIT</div>
+          <div>{{FatherName}}</div>
         </li>
         <li>
           <div>Address</div>
-          <div>BHULI BASTI KUMHAR TOLA DHANBAD</div>
+          <div>{{Address}}</div>
         </li>
       </ul>
 
@@ -118,5 +262,6 @@
         </li>
       </ul>
     </div> -->
+</div>
 </div>
 </div>

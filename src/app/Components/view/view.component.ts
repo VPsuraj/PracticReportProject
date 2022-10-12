@@ -1,8 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 // import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-import {jsPDF} from 'jspdf';
-// import * as jspdf from 'jspdf';
-// import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
@@ -10,29 +8,48 @@ import {jsPDF} from 'jspdf';
 })
 export class ViewComponent implements OnInit {
 
-  // @ViewChild('content',{static:true}) el!:ElementRef
+  header: string
+
+  LastName: string
+  firstname: string
+  MiddleName: string
+
+  dob: string
+  Gender: string
+
+  FatherName:string
+  Address:string
+
+  color:any;
+
+  panelOpenState = false;
+
   @ViewChild('pdfTable', {static: false}) el!: ElementRef ;
 
 
-
-
-
-  // movies = [
-  //   'Episode I - The Phantom Menace',
-  //   'Episode II - Attack of the Clones',
-  //   'Episode III - Revenge of the Sith',
-  //   'Episode IV - A New Hope',
-  //   'Episode V - The Empire Strikes Back',
-  //   'Episode VI - Return of the Jedi',
-  //   'Episode VII - The Force Awakens',
-  //   'Episode VIII - The Last Jedi',
-  //   'Episode IX – The Rise of Skywalker',
-  // ];
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  openBottomSheet() {
+    console.log("Upload function working")
+  }
+
+  selectedFile = File;
+  url = "";
+
+  onFileSelected(event: any) {
+    console.log(event)
+    if(event.target.files){
+    var reader = new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload=(event:any)=>{
+      this.url=event.target.result;
+    }
+  }
+}
 
   // drop(event: CdkDragDrop<string[]>) {
   //   moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
@@ -85,7 +102,7 @@ export class ViewComponent implements OnInit {
 
   makepdf()
   {
-    let pdf =new jsPDF('p',"pt",'b1');
+    let pdf =new jsPDF('p',"pt",'a2');
     pdf.html(this.el.nativeElement,{
       callback:(pdf)=>{
         pdf.save("demo.pdf");

@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import {jsPDF} from 'jspdf';
 
 @Component({
   selector: 'app-home',
@@ -15,16 +14,16 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  makepdf()
-  {
-    let pdf =new jsPDF('p',"pt",'b1');
-    pdf.html(this.el.nativeElement,{
-      callback: (pdf)=>{
-        pdf.save("demo.pdf");
-      }
-    })
+  // makepdf()
+  // {
+  //   let pdf =new jsPDF('p',"pt",'b1');
+  //   pdf.html(this.el.nativeElement,{
+  //     callback: (pdf)=>{
+  //       pdf.save("demo.pdf");
+  //     }
+  //   })
 
 
-  }
+  // }
 
 }
