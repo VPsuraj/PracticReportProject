@@ -1,0 +1,13 @@
+file:/home/ankan/.gitconfig	user.email=ankan@valuepitch.com
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.Ankan.url=https://github.com/Ankansark/PracticReportProject
+file:.git/config	remote.Ankan.fetch=+refs/heads/*:refs/remotes/Ankan/*
+file:.git/config	remote.origin.url=https://github.com/Ankansark/PracticReportProject.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+file:.git/config	branch.Ankan.remote=origin
+file:.git/config	branch.Ankan.merge=refs/heads/Ankan

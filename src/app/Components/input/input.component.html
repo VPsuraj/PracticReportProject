@@ -1,0 +1,181 @@
+<div class="main">
+    <div class="left" style="border: solid red;">
+        <mat-accordion>
+            <mat-expansion-panel class="exp-panel">
+                <mat-expansion-panel-header>
+                    <mat-panel-title class="header_title">
+                        <h2>Header</h2>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="inside-exp">
+                    <span>Header</span>
+                    <div>
+                        <label>
+                            <input type="radio">
+                            Default
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio">
+                            Custom
+                        </label>
+                    </div>
+                </div>
+                <div class="header-line">
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Header Line 1</mat-label>
+                            <input [(ngModel)]="header1" matInput placeholder="Placeholder">
+                        </mat-form-field>
+                    </div>
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Font</mat-label>
+                            <input [(ngModel)]="h1Font" type="number" matInput placeholder="Placeholder">
+                        </mat-form-field>
+                    </div>
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Color</mat-label>
+                            <input matInput type="color">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="header-line">
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Header Line 2</mat-label>
+                            <input [(ngModel)]="header2" matInput placeholder="Placeholder">
+                        </mat-form-field>
+                    </div>
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Font</mat-label>
+                            <input [(ngModel)]="h2Font" type="number" matInput placeholder="Placeholder">
+                        </mat-form-field>
+                    </div>
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Color</mat-label>
+                            <input matInput type="color">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+
+
+                <div class="header-line">
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Header Line 3</mat-label>
+                            <input [(ngModel)]="header3" matInput placeholder="Placeholder">
+                        </mat-form-field>
+                    </div>
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Font</mat-label>
+                            <input [(ngModel)]="h3Font" type="number" matInput placeholder="Placeholder">
+                        </mat-form-field>
+                    </div>
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Color</mat-label>
+                            <input matInput type="color">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+
+
+                <div class="header-line">
+                    <div class="header-input">
+                        <input (change)="onFileSelected($event)" class="upload-file" type="file">
+                    </div>
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Hight</mat-label>
+                            <input [(ngModel)]="hight" type="number" matInput placeholder="Placeholder">
+                        </mat-form-field>
+                    </div>
+                    <div class="header-input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Width</mat-label>
+                            <input [(ngModel)]="width" matInput type="number">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+
+
+
+                <div>
+                    Logo Positon :
+                </div>
+
+                <div class="inside-exp">
+                    <mat-radio-group class="hori-redio" aria-label="Select an option">
+                        <mat-radio-button value="1">Left</mat-radio-button>
+                        <mat-radio-button value="2">Center</mat-radio-button>
+                        <mat-radio-button value="3">Right</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div>
+                    Header Position :
+                </div>
+
+                <div class="inside-exp">
+                    <mat-radio-group class="hori-redio" aria-label="Select an option">
+                        <mat-radio-button value="1">Left</mat-radio-button>
+                        <mat-radio-button value="2">Center</mat-radio-button>
+                        <mat-radio-button value="3">Right</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+
+                <div class="inside-exp">
+                    <mat-radio-group class="hori-redio" aria-label="Select an option">
+                        Add Horizontal Line
+                        <mat-radio-button value="1">Default</mat-radio-button>
+                        <mat-radio-button value="2">Custom</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+
+
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+
+
+
+
+
+    <div class="right" style="border: solid red;">
+
+        <img [src]=url height={{hight}} width={{width}}>
+        Right side div
+        <div class="headerText"  style="border: solid red;">
+
+            <h1 [ngStyle]="{'font-size.px':h1Font}">{{header1}}</h1>
+        </div>
+        <div class="headerText" [ngStyle]="{'font-size.px':h2Font}">
+
+            {{header2}}
+        </div>
+        <div class="headerText" [ngStyle]="{'font-size.px':h3Font}">
+
+            {{header3}}
+        </div>
+    </div>
+</div>

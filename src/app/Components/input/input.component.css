@@ -1,0 +1,72 @@
+
+.main{
+  display: flex;
+}
+
+.left{
+width: 37%;
+}
+
+.right{
+  width: 100%;
+  height:max-content;
+}
+
+.header_title{
+  border-bottom: 1px solid black;
+}
+
+.inside-exp{
+  display: flex;
+  margin-bottom: 1%;
+}
+
+.header-input{
+  width: 30%;
+  margin-right: 5%;
+}
+
+.header-input-color{
+  /* margin-left: 2%; */
+}
+
+.upload-file{
+  width: 90%;
+  /* margin-right: 2%; */
+  /* border: 1px solid rgb(228, 226, 226);
+  padding-top: 1%;
+  padding-bottom: .6%;
+  border-radius: .5vh; */
+
+}
+
+.headerText{
+  height: fit-content;
+  padding: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-line{
+  /* border: solid red; */
+  display: flex;
+  padding: 0;
+}
+
+.hori-redio{
+  width: 50%;
+}
+
+mat-radio-button{
+  margin-left: 3%;
+}
