@@ -1,8 +1,15 @@
 
-
-
 .main{
+  display: flex;
+}
+
+.left{
 width: 37%;
+}
+
+.right{
+  width: 100%;
+  height:max-content;
 }
 
 .header_title{
@@ -33,6 +40,11 @@ width: 37%;
 
 }
 
+.headerText{
+  height: fit-content;
+  padding: 1%;
+}
+
 
 
 
@@ -49,4 +61,12 @@ width: 37%;
   /* border: solid red; */
   display: flex;
   padding: 0;
+}
+
+.hori-redio{
+  width: 50%;
+}
+
+mat-radio-button{
+  margin-left: 3%;
 }
