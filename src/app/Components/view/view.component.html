@@ -1,0 +1,122 @@
+<div class="container" >
+  <div class="downlode"  >
+
+      <button mat-raised-button>
+          <mat-icon aria-hidden="false"
+              style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
+              file_copy</mat-icon>
+      </button>
+      &nbsp;
+      <button mat-raised-button>
+          <mat-icon aria-hidden="false"
+              style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
+              done</mat-icon>
+      </button>
+  </div>
+</div>
+
+<div class="containers" id="pdfTable" #pdfTable>
+  <div class="header" >
+    <div class="logo" >
+      <img src="../../../assets/images/verify24x7.png" alt="verify24x7">
+    </div>
+    <div class="header-text" >
+      <span>VALUEPITCH E-TECHNOLOGIES PVT. LTD.</span>
+      <p>Row House, Plot No. 75, Ground floor, Sector-16, Opp. Beverly Park Lane, Koparkhairane, Navi Mumbai, PIN:
+        400709 Tel: +91 22 32605126 / Bar council Number: MAH/955/2018</p>
+    </div>
+  </div>
+  <div class='time-stamp'>
+    <span class="id">ID: 1234556789456123 </span>
+    <span class="date-time">Date: 11 OCT 2022 / Time : 9:10 AM IST</span>
+  </div>
+  <div class="title">
+    GLOBAL CHECK - PERSON SCAN SUMMARY
+  </div>
+  <p>This information is given with regards to search conducted for: <span>SURAJ KUMAR PANDIT</span></p>
+  <button mat-raised-button (click)="makepdf()">
+    <mat-icon aria-hidden="false"
+        style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
+        download</mat-icon>
+</button>
+  <div class="tables" >
+    <div class="particulars" >
+      <p >PARTICULARS</p>
+      <ul >
+        <li>
+          <div>First Name</div>
+          <div>SURAJ</div>
+        </li>
+        <li>
+          <div>Middle Name</div>
+          <div>KUMAR</div>
+        </li>
+        <li>
+          <div>Last Name</div>
+          <div>PANDIT</div>
+        </li>
+        <li>
+          <div>DOB</div>
+          <div>07-12-1997</div>
+        </li>
+        <li>
+          <div>Gender</div>
+          <div>Male</div>
+        </li>
+        <li>
+          <div>Father's Name</div>
+          <div>DEVENDRA PANDIT</div>
+        </li>
+        <li>
+          <div>Address</div>
+          <div>BHULI BASTI KUMHAR TOLA DHANBAD</div>
+        </li>
+      </ul>
+
+    </div>
+
+
+    <!-- <p class="titles">SUMMARY OF FINDINGS:</p>
+    <div class="summary-data">
+      <div class="titles">
+        <div>CATEGORY</div>
+        <div class="title2nd">HIT FOUND</div>
+      </div>
+      <p>INDIA AND GLOBAL DATABASE CHECKS</p>
+      <ul>
+        <li>
+          <div>ADVERSE MEDIA</div>
+          <div>NO</div>
+        </li>
+        <li>
+          <div>LAW ENFORCEMENT AGENCIES</div>
+          <div>NO</div>
+        </li>
+        <li>
+          <div>LOOKOUT NOTICES</div>
+          <div>NO</div>
+        </li>
+        <li>
+          <div>MOST WANTED</div>
+          <div>NO</div>
+        </li>
+        <li>
+          <div>MONEY LAUNDERING</div>
+          <div>NO</div>
+        </li>
+        <li>
+          <div>District Court</div>
+          <div>NO</div>
+        </li>
+        <li>
+          <div>High Court</div>
+          <div>NO</div>
+        </li>
+        <li>
+          <div>Supreme Court</div>
+          <div>NO</div>
+        </li>
+      </ul>
+    </div> -->
+</div>
+</div>
