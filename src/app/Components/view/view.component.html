@@ -2,101 +2,133 @@
   <div class="left">
     <mat-accordion>
       <mat-expansion-panel class="exp-panel">
-          <mat-expansion-panel-header>
-              <mat-panel-title class="header_title">
-                  <h2>Body</h2>
-              </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="inside-exp">
-              <span>Table</span>
-              <div>
-                  <label>
-                      <input type="radio">
-                      vertical
-                  </label>
-              </div>
-              <div>
-                  <label>
-                      <input type="radio">
-                      Horizontal
-                  </label>
-              </div>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="header_title">
+            <h2>Body</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="inside-exp">
+          <span>Table</span>
+          <div>
+            <label>
+              <input type="radio">
+              vertical
+            </label>
           </div>
-          <div class="header-line">
-              <div class="header-input" >
-                  <mat-form-field class="inputsize" appearance="outline">
-                      <mat-label>input details heading</mat-label>
-                      <input autocomplete="off"  [(ngModel)]="header" matInput placeholder="Placeholder">
-                  </mat-form-field>
-              </div>
-              <!-- <div class="header-input">
+          <div>
+            <label>
+              <input type="radio">
+              Horizontal
+            </label>
+          </div>
+        </div>
+        <div class="header-line">
+          <div class="header-input">
+            <mat-form-field class="inputsize" appearance="outline">
+              <mat-label>input details heading</mat-label>
+              <input autocomplete="off" [(ngModel)]="header" matInput placeholder="Placeholder">
+            </mat-form-field>
+          </div>
+          <!-- <div class="header-input">
                   <mat-form-field appearance="outline">
                       <mat-label>Font</mat-label>
                       <input [(ngModel)]="h1Font" type="number" matInput placeholder="Placeholder">
                   </mat-form-field>
               </div> -->
-              <div class="header-input">
-                  <mat-form-field class="inputsize" appearance="outline">
-                      <mat-label>Color</mat-label>
-                      <input [(ngModel)]="color" matInput type="color">
-                  </mat-form-field>
-              </div>
+          <div class="header-input">
+            <mat-form-field class="inputsize" appearance="outline">
+              <mat-label>Color</mat-label>
+              <input [(ngModel)]="color" matInput type="color">
+            </mat-form-field>
+          </div>
+        </div>
+
+
+
+        <!-- for the the index column and value input  -->
+
+        <div class="header-linee">
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>index</mat-label>
+              <input matInput placeholder="Placeholder" type="number" disabled="on">
+            </mat-form-field>
           </div>
 
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>ColumnName</mat-label>
+              <input type="text" matInput placeholder="Placeholder" disabled="on">
+            </mat-form-field>
+          </div>
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>ColumnValue</mat-label>
+              <input matInput type="text" disabled="on">
+            </mat-form-field>
+          </div>
+        </div>
 
 
+        <!-- now we have to take the index ,column and value input value -->
 
-
-          <div class="header-linee">
-              <div class="header-input">
-                  <mat-form-field class="matinput" appearance="outline">
-                      <mat-label>FirstName</mat-label>
-                      <input [(ngModel)]="firstname" matInput placeholder="Placeholder">
-                  </mat-form-field>
-              </div>
-              <div class="header-input">
-                  <mat-form-field class="matinput" appearance="outline">
-                      <mat-label>MiddleName</mat-label>
-                      <input [(ngModel)]="MiddleName" type="text" matInput placeholder="Placeholder">
-                  </mat-form-field>
-              </div>
-              <div class="header-input">
-                  <mat-form-field class="matinput" appearance="outline">
-                      <mat-label>LastName</mat-label>
-                      <input [(ngModel)]="LastName"  matInput type="text">
-                  </mat-form-field>
-              </div>
+        <div class="header-linee" *ngFor="let value of values;  let i = index">
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>index</mat-label>
+              <input matInput placeholder="Placeholder" type="number" name="index{{i}}">
+            </mat-form-field>
           </div>
 
-
-
-
-          <div class="header-lineee">
-              <div class="header-input">
-                  <mat-form-field class="matinput"  appearance="outline">
-                      <mat-label>DOB</mat-label>
-                      <input [(ngModel)]="dob" matInput placeholder="Placeholder">
-                  </mat-form-field>
-              </div>
-              <div class="header-input">
-                  <mat-form-field class="matinput"  appearance="outline">
-                      <mat-label>Gender</mat-label>
-                      <input [(ngModel)]="Gender" type="text" matInput placeholder="Placeholder">
-                  </mat-form-field>
-              </div>
-              <div class="header-input">
-                  <mat-form-field class="matinput"  appearance="outline">
-                      <mat-label>FatherName</mat-label>
-                      <input [(ngModel)]="FatherName" matInput type="text">
-                  </mat-form-field>
-              </div>
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>ColumnName</mat-label>
+              <input [(ngModel)]="value.value" name="value" type="text" matInput placeholder="Placeholder">
+            </mat-form-field>
           </div>
 
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>ColumnValue</mat-label>
+              <input matInput type="text" name="cVlaue" [(ngModel)]="value.cVlaue">
+            </mat-form-field>
+          </div>
+
+        </div>
+        <button class="add-btn" (click)="addvalue()">
+          <mat-icon>add</mat-icon>
+        </button>
 
 
 
-          <div class="header-line">
-              <!-- <div class="header-input">
+        <!-- this is extend for the column and thier value input -->
+
+        <!-- <div class="header-lineee">
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>index</mat-label>
+              <input [(ngModel)]="index" matInput placeholder="Placeholder" type="number">
+            </mat-form-field>
+          </div>
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>ColumnName</mat-label>
+              <input [(ngModel)]="C2name" type="text" matInput placeholder="Placeholder">
+            </mat-form-field>
+          </div>
+          <div class="header-input">
+            <mat-form-field class="matinput" appearance="outline">
+              <mat-label>ColumnValue</mat-label>
+              <input [(ngModel)]="FatherName" matInput type="text">
+            </mat-form-field>
+          </div>
+        </div> -->
+
+
+
+
+        <!-- <div class="header-line">
+          <div class="header-input">
                   <input (change)="onFileSelected($event)" class="upload-file" type="file">
               </div>
               <div class="header-input">
@@ -104,20 +136,20 @@
                       <mat-label>Hight</mat-label>
                       <input [(ngModel)]="hight" type="number" matInput placeholder="Placeholder">
                   </mat-form-field>
-              </div> -->
-              <div class="header-input">
-                  <mat-form-field class="inputsize" appearance="outline">
-                      <mat-label>Address</mat-label>
-                      <input [(ngModel)]="Address" matInput type="text">
-                  </mat-form-field>
               </div>
+          <div class="header-input">
+            <mat-form-field class="inputsize" appearance="outline">
+              <mat-label>Address</mat-label>
+              <input [(ngModel)]="Address" matInput type="text">
+            </mat-form-field>
           </div>
+        </div> -->
 
 
 
 
 
-          <!-- <div>
+        <!-- <div>
               Logo Positon :
           </div>
 
@@ -153,74 +185,74 @@
 
 
       </mat-expansion-panel>
-  </mat-accordion>
-</div>
+    </mat-accordion>
+  </div>
 
-<!-- for pdf file generation html -->
+  <!-- for pdf file generation html -->
 
-<div class="containers" id="pdfTable" #pdfTable>
-  <button id='downlode' mat-raised-button (click)="makepdf()">
-    <mat-icon aria-hidden="false"
-        style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
+  <div class="containers" id="pdfTable" #pdfTable>
+    <button id='downlode' mat-raised-button (click)="makepdf()">
+      <mat-icon aria-hidden="false" style="background-color: #17a2b8; border-color: #17a2b8; color:white;">
         download</mat-icon>
-</button>
-  <div class="header" >
-    <div class="logo" >
-      <img src="../../../assets/images/verify24x7.png" alt="verify24x7">
+    </button>
+    <div class="header">
+      <div class="logo">
+        <img src="../../../assets/images/verify24x7.png" alt="verify24x7">
+      </div>
+      <div class="header-text">
+        <span>VALUEPITCH E-TECHNOLOGIES PVT. LTD.</span>
+        <p>Row House, Plot No. 75, Ground floor, Sector-16, Opp. Beverly Park Lane, Koparkhairane, Navi Mumbai, PIN:
+          400709 Tel: +91 22 32605126 / Bar council Number: MAH/955/2018</p>
+      </div>
     </div>
-    <div class="header-text" >
-      <span>VALUEPITCH E-TECHNOLOGIES PVT. LTD.</span>
-      <p>Row House, Plot No. 75, Ground floor, Sector-16, Opp. Beverly Park Lane, Koparkhairane, Navi Mumbai, PIN:
-        400709 Tel: +91 22 32605126 / Bar council Number: MAH/955/2018</p>
+    <div class='time-stamp'>
+      <span class="id">ID: 1234556789456123 </span>
+      <span class="date-time">Date: 11 OCT 2022 / Time : 9:10 AM IST</span>
     </div>
-  </div>
-  <div class='time-stamp'>
-    <span class="id">ID: 1234556789456123 </span>
-    <span class="date-time">Date: 11 OCT 2022 / Time : 9:10 AM IST</span>
-  </div>
-  <div class="title">
-    GLOBAL CHECK - PERSON SCAN SUMMARY
-  </div>
-  <p>This information is given with regards to search conducted for: <span>SURAJ KUMAR PANDIT</span></p>
-
-  <div class="tables" >
-    <div class="particulars"  >
-      <p [ngStyle]="{'background-color':color}">{{header}} </p>
-      <ul >
-        <li>
-          <div>First Name</div>
-          <div>{{firstname}}</div>
-        </li>
-        <li>
-          <div>Middle Name</div>
-          <div>{{MiddleName}}</div>
-        </li>
-        <li>
-          <div>Last Name</div>
-          <div>{{LastName}}</div>
-        </li>
-        <li>
-          <div>DOB</div>
-          <div>{{dob}}</div>
-        </li>
-        <li>
-          <div>Gender</div>
-          <div>{{Gender}}</div>
-        </li>
-        <li>
-          <div>Father's Name</div>
-          <div>{{FatherName}}</div>
-        </li>
-        <li>
-          <div>Address</div>
-          <div>{{Address}}</div>
-        </li>
-      </ul>
-
+    <div class="title">
+      GLOBAL CHECK - PERSON SCAN SUMMARY
     </div>
+    <p>This information is given with regards to search conducted for: <span>SURAJ KUMAR PANDIT</span></p>
+
+    <div class="tables">
+      <p [ngStyle]="{'background-color':color}">{{header}}</p>
+      <div class="particulars " >
+
+        <ul *ngFor="let value of values;" >
+            <li>
+              <div>{{ value.value }}</div>
+              <div>{{value.cVlaue}}</div>
+            </li>
+          <!-- <li>
+            <div>{{C2name}}</div>
+            <div>{{MiddleName}}</div>
+          </li>
+          <li>
+            <div>Last Name</div>
+            <div>{{LastName}}</div>
+          </li> -->
+          <!-- <li>
+            <div>DOB</div>
+            <div>{{dob}}</div>
+          </li>
+          <li>
+            <div>Gender</div>
+            <div>{{Gender}}</div>
+          </li>
+          <li>
+            <div>Father's Name</div>
+            <div>{{FatherName}}</div>
+          </li>
+          <li>
+            <div>Address</div>
+            <div>{{Address}}</div>
+          </li> -->
+        </ul>
+
+      </div>
 
 
-    <!-- <p class="titles">SUMMARY OF FINDINGS:</p>
+      <!-- <p class="titles">SUMMARY OF FINDINGS:</p>
     <div class="summary-data">
       <div class="titles">
         <div>CATEGORY</div>
@@ -262,6 +294,6 @@
         </li>
       </ul>
     </div> -->
-</div>
-</div>
+    </div>
+  </div>
 </div>

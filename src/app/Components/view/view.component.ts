@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormArray } from '@angular/forms';
 // import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import jsPDF from 'jspdf';
 @Component({
@@ -8,7 +9,14 @@ import jsPDF from 'jspdf';
 })
 export class ViewComponent implements OnInit {
 
+  showBodyForm: boolean = false;
+  personal_info!: FormArray;
+  getHeaders: any = [];
+
   header: string
+  index:number;
+  cName:string;
+  C2name:string;
 
   LastName: string
   firstname: string
@@ -21,6 +29,8 @@ export class ViewComponent implements OnInit {
   Address:string
 
   color:any;
+
+  values = [];
 
   panelOpenState = false;
 
@@ -111,4 +121,11 @@ export class ViewComponent implements OnInit {
 
 
   }
+  add_more_input(){
+  }
+
+  addvalue(){
+    this.values.push({value: ""});
+  }
+
 }

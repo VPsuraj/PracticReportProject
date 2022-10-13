@@ -15,7 +15,7 @@ margin-left: 90%;
 }
 
 .left{
-  width: 40%;
+  width: 48%;
   margin-top: 1.65rem;
   }
 
@@ -93,6 +93,9 @@ display: flex;
 .particulars li div:nth-child(2) {
   margin-top: 10px;
 }
+.particulars{
+  display: flex;
+}
 
 .titles{
   font-weight: 600;
@@ -116,6 +119,10 @@ display: flex;
 
 .title2nd{
  margin-left: 92%;
+}
+
+.table p{
+  padding-bottom: 20px;
 }
 
  /* .summary-data p,
@@ -206,5 +213,11 @@ display: flex;
 
 mat-radio-button{
   margin-left: 3%;
+}
+
+.add-btn{
+  padding: 0%;
+  height: fit-content;
+  margin-top:1rem;
 }
 
